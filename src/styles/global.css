@@ -1,68 +1,127 @@
 @import "tailwindcss";
 
 @theme {
-  --color-avocado-50: #F0F7E8;
-  --color-avocado-100: #E1F0D1;
-  --color-avocado-200: #C4E1A3;
-  --color-avocado-300: #A6D275;
-  --color-avocado-400: #89C347;
-  --color-avocado-500: #6B9E2A;
-  --color-avocado-600: #5B8C2A;
-  --color-avocado-700: #4A7C2E;
-  --color-avocado-800: #3D5E1A;
-  --color-avocado-900: #2E4F0D;
-  --color-cream: #FEFDF9;
-  --color-warm-white: #FFFAF2;
-  --color-gold-400: #E8C766;
-  --color-gold-500: #D4A843;
-  --color-gold-600: #B8922E;
-  --font-heading: 'Georgia', 'Times New Roman', serif;
-  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --color-dental-50: #f0f4f8;
+  --color-dental-100: #dce6f0;
+  --color-dental-200: #b0c4d8;
+  --color-dental-300: #7e9bb8;
+  --color-dental-400: #5a7d9e;
+  --color-dental-500: #3d6185;
+  --color-dental-600: #2a4a6b;
+  --color-dental-700: #1e3a5f;
+  --color-dental-800: #152a45;
+  --color-dental-900: #0d1b2e;
+
+  --color-leaf-50: #f2f7ee;
+  --color-leaf-100: #e2f0d8;
+  --color-leaf-400: #7ba85c;
+  --color-leaf-500: #5d8a3f;
+  --color-leaf-600: #4a7a2e;
+  --color-leaf-700: #3a621f;
+
+  --color-warm-100: #fefce8;
+  --color-warm-200: #fef3c7;
+  --color-warm-400: #e8c766;
+  --color-warm-500: #d4a843;
+  --color-warm-600: #b8922e;
+
+  --color-cream: #fafaf9;
+
+  /* Backward compat — map old class names */
+  --color-avocado-50: #f2f7ee;
+  --color-avocado-100: #e2f0d8;
+  --color-avocado-200: #c8dcc0;
+  --color-avocado-300: #a3b899;
+  --color-avocado-400: #7ba85c;
+  --color-avocado-500: #5d8a3f;
+  --color-avocado-600: #4a7a2e;
+  --color-avocado-700: #1e3a5f;
+  --color-avocado-800: #152a45;
+  --color-avocado-900: #0d1b2e;
+
+  --color-gold-50: #fefce8;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fce899;
+  --color-gold-400: #e8c766;
+  --color-gold-500: #d4a843;
+  --color-gold-600: #b8922e;
+
+  --font-heading: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: var(--font-body);
-  }
-
-  h1, h2, h3, h4 {
-    font-family: var(--font-heading);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    color: #1A1A2E;
-    background-color: var(--color-cream);
+    font-family: var(--font-sans);
+    color: #1a1a2e;
+    background-color: #fafaf9;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.02em;
   }
 }
 
-@layer components {
-  .btn-primary {
-    @apply inline-block px-8 py-4 bg-avocado-600 text-white font-semibold rounded-lg
-           hover:bg-avocado-700 transition-all duration-200 shadow-md hover:shadow-lg
-           text-center;
-  }
-
-  .btn-secondary {
-    @apply inline-block px-8 py-4 border-2 border-avocado-600 text-avocado-700 font-semibold
-           rounded-lg hover:bg-avocado-50 transition-all duration-200 text-center;
-  }
-
-  .btn-gold {
-    @apply inline-block px-8 py-4 bg-gold-500 text-white font-semibold rounded-lg
-           hover:bg-gold-600 transition-all duration-200 shadow-md hover:shadow-lg
-           text-center;
-  }
-
-  .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
-  }
-
+@layer utilities {
   .container-max {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-10;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-28;
   }
 
   .card {
-    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 p-6;
+    @apply bg-white rounded-2xl border border-gray-100 p-6 sm:p-8
+           transition-shadow duration-200;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-lg hover:border-gray-200;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold
+           rounded-full transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-dental-700 text-white hover:bg-dental-800 shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply btn-outline;
+  }
+
+  .btn-accent {
+    @apply btn bg-leaf-600 text-white hover:bg-leaf-700 shadow-sm hover:shadow-md;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-dental-700 text-dental-700 hover:bg-dental-700 hover:text-white;
+  }
+
+  .btn-gold {
+    @apply btn bg-warm-500 text-white hover:bg-warm-600 shadow-sm hover:shadow-md;
+  }
+
+  .section-padding {
+    @apply section;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .prose-body {
+    @apply text-gray-600 leading-relaxed;
   }
 }

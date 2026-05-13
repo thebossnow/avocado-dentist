@@ -10,7 +10,6 @@ export interface Props {
 }
 
 const { title, description, ogImage = '/og-default.jpg' } = Astro.props;
-const siteTitle = 'Downtown Dental Studio | Fallbrook Dentist';
 const fullTitle = title.includes('Downtown Dental') ? title : `${title} | Downtown Dental Studio`;
 const siteUrl = 'https://avocadodentist.com';
 const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
@@ -23,8 +22,6 @@ const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-
-    <!-- Open Graph -->
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={currentUrl} />
@@ -32,23 +29,16 @@ const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
     <meta property="og:site_name" content="Downtown Dental Studio" />
     <meta property="og:image" content={`${siteUrl}${ogImage}`} />
     <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-
-    <!-- Canonical -->
     <link rel="canonical" href={currentUrl} />
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col antialiased">
     <Header />
     <main class="flex-1">
       <slot />
