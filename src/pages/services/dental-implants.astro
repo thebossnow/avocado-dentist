@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  { q: 'How long do dental implants last?', a: 'With proper care and regular checkups, dental implants can last a lifetime. The crown attached to the implant typically lasts 15–20 years before needing replacement.' },
+  { q: 'Am I a candidate for dental implants?', a: 'Most healthy adults are candidates for dental implants. Key factors include sufficient jawbone density, good oral health, and overall health. Dr. Gill conducts a thorough evaluation to determine your candidacy.' },
+  { q: 'How much do dental implants cost?', a: 'Costs vary based on the number of implants, whether bone grafting is needed, and the type of restoration. We provide a detailed treatment plan with transparent pricing. Financing available through CareCredit and Cherry.' },
+  { q: 'Is the implant procedure painful?', a: 'The procedure is performed under local anesthesia, so you should not feel pain — only pressure. Post-procedure discomfort is typically manageable with over-the-counter pain relievers.' },
+  { q: 'How long does the implant process take?', a: 'The full process typically takes 3–6 months. This includes implant placement, healing (osseointegration), and crown placement. Some cases may qualify for same-day implant-supported restorations.' },
+];
+
+const pageData = { questions: faqs.map(f => ({ question: f.q, answer: f.a })) };
+---
+
+<Layout
+  title="Dental Implants Fallbrook CA | Tooth Replacement & Implant Dentist"
+  description="Dr. Richard J Gill provides dental implants in Fallbrook, CA — permanent tooth replacement that looks and feels natural. Single implants, implant-supported bridges, and full-arch restoration. Call (442) 317-7000."
+  pageType="faq" pageData={pageData}
+>
+  <section class="bg-gradient-to-br from-avocado-700 to-avocado-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">Dental Implants in Fallbrook</h1>
+      <p class="text-xl text-avocado-100 max-w-2xl">Permanent tooth replacement that restores your smile, your confidence, and your quality of life.</p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Restore Your Smile Permanently</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Missing teeth affect more than just your appearance — they impact your ability to eat, speak, and smile 
+            with confidence. Dental implants are the gold standard in tooth replacement, offering a permanent solution 
+            that looks, feels, and functions just like natural teeth.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            Dr. Richard J Gill has extensive experience placing and restoring dental implants, helping Fallbrook 
+            patients regain complete, functional smiles that last a lifetime.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Implant Solutions We Offer</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🔩 Single Tooth Implants</h3><p class="text-gray-600 text-sm">Replace one missing tooth with a natural-looking implant and custom crown.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🌉 Implant Bridges</h3><p class="text-gray-600 text-sm">Replace multiple adjacent teeth using fewer implants — a stable, cost-effective option.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🦷 Implant-Supported Dentures</h3><p class="text-gray-600 text-sm">Secure, snap-in dentures that eliminate slipping and restore full chewing function.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🏗️ Full-Arch Restoration</h3><p class="text-gray-600 text-sm">Replace all upper or lower teeth with a fixed bridge supported by multiple implants.</p></div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Why Choose Implants?</h2>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex gap-2"><span class="text-avocado-500">✓</span> <strong>Natural look and feel</strong> — indistinguishable from real teeth</li>
+            <li class="flex gap-2"><span class="text-avocado-500">✓</span> <strong>Preserves jawbone</strong> — prevents bone loss that occurs with missing teeth</li>
+            <li class="flex gap-2"><span class="text-avocado-500">✓</span> <strong>No impact on adjacent teeth</strong> — unlike bridges, implants don't require grinding down healthy teeth</li>
+            <li class="flex gap-2"><span class="text-avocado-500">✓</span> <strong>Eat, speak, and smile confidently</strong> — no slipping, clicking, or food restrictions</li>
+          </ul>
+        </div>
+
+        <div><h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">FAQ</h2>
+          <div class="space-y-4">{faqs.map(faq => (<div class="card"><h3 class="font-semibold text-gray-800 mb-2">{faq.q}</h3><p class="text-gray-600 text-sm">{faq.a}</p></div>))}</div>
+        </div>
+      </div>
+      <div class="lg:col-span-1 space-y-6">
+        <div class="card bg-avocado-50 border border-avocado-200"><h3 class="font-semibold text-avocado-800 mb-3 font-[family:var(--font-heading)]">📍 Visit Us</h3><p class="text-gray-700 text-sm">1180 S Main Ave<br/>Fallbrook, CA 92028</p><a href="tel:4423177000" class="block mt-3 text-avocado-600 font-semibold text-sm hover:underline">(442) 317-7000</a></div>
+        <div class="card bg-gold-50 border border-gold-200"><h3 class="font-semibold text-avocado-800 mb-3 font-[family:var(--font-heading)]">💎 Financing Available</h3><p class="text-gray-700 text-sm mb-3">CareCredit & Cherry offer flexible payment plans for implant treatment.</p><a href="/patient-info/" class="text-avocado-600 font-medium text-sm hover:underline">Learn More →</a></div>
+      </div>
+    </div>
+  </section>
+</Layout>

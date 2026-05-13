@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  { q: 'How do I know if I need a root canal?', a: 'Common signs include persistent tooth pain, sensitivity to hot and cold that lingers, swelling or tenderness in nearby gums, and darkening of the tooth. If you\'re experiencing any of these symptoms, call us for an evaluation.' },
+  { q: 'Are root canals painful?', a: 'Modern root canals are no more uncomfortable than getting a filling. The procedure actually relieves the pain caused by the infected tooth. We use local anesthesia and gentle techniques to ensure your comfort.' },
+  { q: 'How long do dental crowns last?', a: 'With proper care and good oral hygiene, dental crowns typically last 10–15 years or longer. Regular dental checkups help extend their lifespan.' },
+  { q: 'What are crowns made of?', a: 'Crowns can be made from porcelain, ceramic, porcelain-fused-to-metal, or zirconia. We recommend tooth-colored materials for the most natural appearance, especially for visible teeth.' },
+  { q: 'Do I need a crown after a root canal?', a: 'In most cases, yes. A root canal removes the tooth\'s nerve and blood supply, which can make it more brittle over time. A crown protects the tooth and restores full function.' },
+];
+
+const pageData = { questions: faqs.map(f => ({ question: f.q, answer: f.a })) };
+---
+
+<Layout
+  title="Root Canals & Crowns Fallbrook CA | Restorative Dentistry"
+  description="Dr. Richard J Gill provides gentle root canals and custom dental crowns in Fallbrook, CA. Save your natural teeth with expert restorative care. Emergency appointments available. Call (442) 317-7000."
+  pageType="faq" pageData={pageData}
+>
+  <section class="bg-gradient-to-br from-avocado-700 to-avocado-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">Crowns & Root Canals in Fallbrook</h1>
+      <p class="text-xl text-avocado-100 max-w-2xl">Expert restorative care to save damaged teeth and restore your smile's health and function.</p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Save Your Natural Teeth</h2>
+          <p class="text-gray-700 leading-relaxed">
+            When a tooth is damaged by decay, infection, or injury, restorative treatment can save it — preserving 
+            your natural smile and avoiding extraction. Dr. Gill combines advanced techniques with a gentle touch 
+            to make root canals and crown placement as comfortable as possible.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Our Restorative Services</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🦷 Root Canal Therapy</h3><p class="text-gray-600 text-sm">Removes infected pulp, eliminates pain, and saves your natural tooth from extraction.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">👑 Dental Crowns</h3><p class="text-gray-600 text-sm">Custom-fabricated caps that protect and restore damaged, weakened, or root-canal-treated teeth.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🔬 Same-Day Crowns</h3><p class="text-gray-600 text-sm">Advanced technology allows us to design, fabricate, and place your crown efficiently.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🛡️ Post & Core Build-Up</h3><p class="text-gray-600 text-sm">Reinforces severely damaged teeth before crown placement for long-term stability.</p></div>
+          </div>
+        </div>
+
+        <div><h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">FAQ</h2>
+          <div class="space-y-4">{faqs.map(faq => (<div class="card"><h3 class="font-semibold text-gray-800 mb-2">{faq.q}</h3><p class="text-gray-600 text-sm">{faq.a}</p></div>))}</div>
+        </div>
+      </div>
+      <div class="lg:col-span-1 space-y-6">
+        <div class="card bg-avocado-50 border border-avocado-200"><h3 class="font-semibold text-avocado-800 mb-3 font-[family:var(--font-heading)]">📍 Visit Us</h3><p class="text-gray-700 text-sm">1180 S Main Ave<br/>Fallbrook, CA 92028</p><a href="tel:4423177000" class="block mt-3 text-avocado-600 font-semibold text-sm hover:underline">(442) 317-7000</a></div>
+        <div class="card bg-red-50 border border-red-200"><h3 class="font-semibold text-red-800 mb-3 font-[family:var(--font-heading)]">🚨 In Pain?</h3><p class="text-gray-700 text-sm mb-3">Don't wait. Call now for a same-day emergency evaluation.</p><a href="tel:4423177000" class="block text-red-600 font-bold text-sm hover:underline">Call (442) 317-7000</a></div>
+      </div>
+    </div>
+  </section>
+</Layout>

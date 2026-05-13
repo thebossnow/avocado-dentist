@@ -1,0 +1,126 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  { q: 'How often should I visit the dentist?', a: 'The American Dental Association recommends a checkup and cleaning every six months. However, some patients with specific conditions may benefit from more frequent visits. Dr. Gill will recommend the right schedule for you.' },
+  { q: 'Do you treat children?', a: 'Yes! Downtown Dental Studio is a family-friendly practice. We welcome patients of all ages, from young children to seniors.' },
+  { q: 'What happens during a routine checkup?', a: 'Your checkup includes a thorough oral exam, digital X-rays if needed, professional cleaning, oral cancer screening, and a discussion of any concerns or treatment recommendations.' },
+  { q: 'Do you offer teeth whitening?', a: 'Yes. We offer professional-grade whitening treatments, including in-office and take-home options. Visit our cosmetic dentistry page for more details.' },
+  { q: 'What if I have dental anxiety?', a: 'We understand dental anxiety is real. Dr. Gill and the team take a gentle, patient-centered approach. Let us know your concerns and we\'ll work with you to make your visit as comfortable as possible.' },
+];
+
+const pageData = { questions: faqs.map(f => ({ question: f.q, answer: f.a })) };
+---
+
+<Layout
+  title="General Dentistry in Fallbrook CA | Exams, Cleanings & Fillings"
+  description="Dr. Richard J Gill offers complete general and family dentistry in Fallbrook, CA. Routine exams, professional cleanings, digital X-rays, fillings, and preventive care for all ages. Call (442) 317-7000."
+  pageType="faq"
+  pageData={pageData}
+>
+  <section class="bg-gradient-to-br from-avocado-700 to-avocado-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">General Dentistry in Fallbrook</h1>
+      <p class="text-xl text-avocado-100 max-w-2xl">Keeping your smile healthy with comprehensive preventive and restorative care for the whole family.</p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Complete Family Dental Care in Fallbrook</h2>
+          <p class="text-gray-700 leading-relaxed">
+            At Downtown Dental Studio, we believe that a healthy smile starts with exceptional preventive care. 
+            Dr. Richard J Gill provides comprehensive general dentistry services for patients of all ages — 
+            from a child's first dental visit to senior oral health maintenance.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            Regular checkups are the foundation of lifelong oral health. We use modern diagnostic technology 
+            to catch issues early, when they're easiest — and least expensive — to treat.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Our General Dentistry Services</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="card">
+              <h3 class="font-semibold text-gray-800 mb-2">🪥 Routine Exams & Cleanings</h3>
+              <p class="text-gray-600 text-sm">Thorough oral examinations and professional cleanings to prevent cavities and gum disease.</p>
+            </div>
+            <div class="card">
+              <h3 class="font-semibold text-gray-800 mb-2">📸 Digital X-Rays</h3>
+              <p class="text-gray-600 text-sm">Low-radiation digital imaging for accurate diagnosis with enhanced patient safety.</p>
+            </div>
+            <div class="card">
+              <h3 class="font-semibold text-gray-800 mb-2">🦷 Fillings</h3>
+              <p class="text-gray-600 text-sm">Tooth-colored composite fillings that restore function and blend naturally with your smile.</p>
+            </div>
+            <div class="card">
+              <h3 class="font-semibold text-gray-800 mb-2">🔬 Oral Cancer Screenings</h3>
+              <p class="text-gray-600 text-sm">Early detection saves lives. Every checkup includes a thorough oral cancer screening.</p>
+            </div>
+            <div class="card">
+              <h3 class="font-semibold text-gray-800 mb-2">🛡️ Gum Disease Treatment</h3>
+              <p class="text-gray-600 text-sm">Diagnosis and treatment of gingivitis and periodontitis to protect your oral and overall health.</p>
+            </div>
+            <div class="card">
+              <h3 class="font-semibold text-gray-800 mb-2">👶 Pediatric Dentistry</h3>
+              <p class="text-gray-600 text-sm">Gentle, kid-friendly dental care that builds positive habits and healthy smiles from the start.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">Frequently Asked Questions</h2>
+          <div class="space-y-4">
+            {faqs.map(faq => (
+              <div class="card">
+                <h3 class="font-semibold text-gray-800 mb-2">{faq.q}</h3>
+                <p class="text-gray-600 text-sm">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1 space-y-6">
+        <div class="card bg-avocado-50 border border-avocado-200">
+          <h3 class="font-semibold text-avocado-800 mb-3 font-[family:var(--font-heading)]">📍 Visit Us</h3>
+          <p class="text-gray-700 text-sm">1180 S Main Ave<br/>Fallbrook, CA 92028</p>
+          <a href="tel:4423177000" class="block mt-3 text-avocado-600 font-semibold text-sm hover:underline">(442) 317-7000</a>
+        </div>
+
+        <div class="card bg-gold-50 border border-gold-200">
+          <h3 class="font-semibold text-avocado-800 mb-3 font-[family:var(--font-heading)]">💎 Save With a Membership</h3>
+          <p class="text-gray-700 text-sm mb-3">No insurance? Our VIP plans cover cleanings, exams, and X-rays starting at $39/month.</p>
+          <a href="/memberships/" class="text-avocado-600 font-medium text-sm hover:underline">View Plans →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="font-semibold text-gray-800 mb-3 font-[family:var(--font-heading)]">Other Services</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/services/cosmetic-dentistry/" class="text-avocado-600 hover:underline">Cosmetic Dentistry</a></li>
+            <li><a href="/services/dental-implants/" class="text-avocado-600 hover:underline">Dental Implants</a></li>
+            <li><a href="/services/invisalign/" class="text-avocado-600 hover:underline">Invisalign®</a></li>
+            <li><a href="/services/root-canals-crowns/" class="text-avocado-600 hover:underline">Crowns & Root Canals</a></li>
+            <li><a href="/services/emergency-dentistry/" class="text-avocado-600 hover:underline">Emergency Dentistry</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-avocado-800 text-white">
+    <div class="container-max px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h2 class="text-3xl font-bold mb-4 font-[family:var(--font-heading)]">Schedule Your Checkup Today</h2>
+      <p class="text-lg text-avocado-200 mb-8">New patients welcome. Most insurance accepted.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="tel:4423177000" class="btn-gold text-lg">📞 (442) 317-7000</a>
+        <a href="/contact/" class="btn-secondary !border-white !text-white hover:!bg-white/10 text-lg">Request Appointment</a>
+      </div>
+    </div>
+  </section>
+</Layout>

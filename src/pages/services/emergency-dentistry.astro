@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  { q: 'What counts as a dental emergency?', a: 'Dental emergencies include severe toothache, knocked-out tooth, broken or cracked tooth, lost filling or crown, abscess or swelling, and injury to the mouth or jaw. If you\'re unsure, call us — we\'ll help you determine if you need immediate care.' },
+  { q: 'Can you see me the same day?', a: 'Yes! We reserve time in our daily schedule for emergency patients. Call (442) 317-7000 and we\'ll get you in as quickly as possible — often the same day.' },
+  { q: 'What should I do if my tooth gets knocked out?', a: 'Pick it up by the crown (not the root), rinse gently with water, and try to place it back in the socket. If that\'s not possible, keep it in milk or between your cheek and gums. Call us immediately — time is critical for saving the tooth.' },
+  { q: 'I have a severe toothache — what can I do while waiting?', a: 'Rinse with warm salt water, floss gently to remove any trapped food, and take over-the-counter pain relievers. Avoid placing aspirin directly on the gums. Call us right away for an appointment.' },
+  { q: 'Do you treat dental emergencies for non-patients?', a: 'Absolutely. If you have a dental emergency, we\'ll see you regardless of whether you\'re an established patient. Your comfort and health come first.' },
+];
+
+const pageData = { questions: faqs.map(f => ({ question: f.q, answer: f.a })) };
+---
+
+<Layout
+  title="Emergency Dentist Fallbrook CA | Same-Day Urgent Dental Care"
+  description="Dental emergency in Fallbrook? Dr. Richard J Gill offers same-day emergency dental care. Severe toothaches, broken teeth, knocked-out teeth, abscesses. Call (442) 317-7000 now."
+  pageType="faq" pageData={pageData}
+>
+  <section class="bg-gradient-to-br from-red-700 to-red-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">Emergency Dentistry — Fallbrook</h1>
+      <p class="text-xl text-red-100 max-w-2xl">Same-day urgent care when you need it most. Don't suffer in pain — call us now.</p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Dental Emergencies Can't Wait</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Dental pain is not something you should ignore. At Downtown Dental Studio, Dr. Richard J Gill 
+            and his team understand that emergencies don't happen on a schedule. We reserve time in our 
+            daily calendar for urgent cases so we can see you quickly — often the same day you call.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Common Dental Emergencies We Treat</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🔴 Severe Toothache</h3><p class="text-gray-600 text-sm">Intense, persistent pain that may indicate infection, deep decay, or nerve damage.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🦷 Knocked-Out Tooth</h3><p class="text-gray-600 text-sm">Quick action can save a knocked-out tooth. Call immediately — time is critical.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">💥 Broken or Cracked Tooth</h3><p class="text-gray-600 text-sm">Trauma or biting on something hard can crack teeth. Prompt treatment prevents further damage.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">⚠️ Lost Filling or Crown</h3><p class="text-gray-600 text-sm">Exposed tooth structure is sensitive and vulnerable. We'll restore it quickly.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🦠 Abscess or Swelling</h3><p class="text-gray-600 text-sm">Facial swelling can indicate a serious infection. This needs immediate professional attention.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🩹 Soft Tissue Injury</h3><p class="text-gray-600 text-sm">Cuts, tears, or trauma to the lips, gums, tongue, or cheeks requiring urgent care.</p></div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">What to Do in a Dental Emergency</h2>
+          <ol class="space-y-3 text-gray-700">
+            <li class="flex gap-3"><span class="text-avocado-600 font-bold text-lg">1.</span> <span><strong>Stay calm</strong> — panic makes everything worse. Take a deep breath.</span></li>
+            <li class="flex gap-3"><span class="text-avocado-600 font-bold text-lg">2.</span> <span><strong>Call us immediately</strong> at (442) 317-7000. Describe your symptoms clearly.</span></li>
+            <li class="flex gap-3"><span class="text-avocado-600 font-bold text-lg">3.</span> <span><strong>Follow first-aid guidance</strong> — we'll give you specific instructions based on your situation.</span></li>
+            <li class="flex gap-3"><span class="text-avocado-600 font-bold text-lg">4.</span> <span><strong>Come in right away</strong> — we're at 1180 S Main Ave, Fallbrook.</span></li>
+          </ol>
+        </div>
+
+        <div><h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">FAQ</h2>
+          <div class="space-y-4">{faqs.map(faq => (<div class="card"><h3 class="font-semibold text-gray-800 mb-2">{faq.q}</h3><p class="text-gray-600 text-sm">{faq.a}</p></div>))}</div>
+        </div>
+      </div>
+      <div class="lg:col-span-1 space-y-6">
+        <div class="card bg-red-50 border-2 border-red-300">
+          <h3 class="font-semibold text-red-800 mb-3 font-[family:var(--font-heading)]">🚨 Emergency?</h3>
+          <p class="text-gray-700 text-sm mb-3 font-semibold">Call now. We're here to help.</p>
+          <a href="tel:4423177000" class="block w-full text-center px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition">📞 (442) 317-7000</a>
+          <p class="text-xs text-gray-500 mt-3">Same-day appointments available</p>
+        </div>
+        <div class="card bg-avocado-50 border border-avocado-200"><h3 class="font-semibold text-avocado-800 mb-3 font-[family:var(--font-heading)]">📍 Location</h3><p class="text-gray-700 text-sm">1180 S Main Ave<br/>Fallbrook, CA 92028</p><p class="text-gray-600 text-sm mt-2">Mon–Fri: 8am–5pm</p></div>
+      </div>
+    </div>
+  </section>
+</Layout>

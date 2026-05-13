@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Downtown Dental Studio | Fallbrook Dentist"
+  description="Get in touch with Dr. Richard J Gill at Downtown Dental Studio. Located at 1180 S Main Ave, Fallbrook, CA 92028. Call (442) 317-7000 or use our online form."
+  pageType="business"
+>
+  <section class="bg-gradient-to-br from-avocado-700 to-avocado-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">Contact Us</h1>
+      <p class="text-xl text-avocado-100">We'd love to hear from you. Schedule your visit today.</p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Contact Info -->
+      <div>
+        <h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">Get In Touch</h2>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <span class="text-2xl">📍</span>
+            <div>
+              <h3 class="font-semibold text-gray-800">Address</h3>
+              <address class="not-italic text-gray-600">
+                1180 S Main Ave<br/>
+                Fallbrook, CA 92028
+              </address>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <span class="text-2xl">📞</span>
+            <div>
+              <h3 class="font-semibold text-gray-800">Phone</h3>
+              <a href="tel:4423177000" class="text-avocado-600 font-semibold hover:underline">(442) 317-7000</a>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <span class="text-2xl">✉️</span>
+            <div>
+              <h3 class="font-semibold text-gray-800">Email</h3>
+              <a href="mailto:info@ddsoffallbrook.com" class="text-avocado-600 hover:underline">info@ddsoffallbrook.com</a>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <span class="text-2xl">🕐</span>
+            <div>
+              <h3 class="font-semibold text-gray-800">Office Hours</h3>
+              <div class="text-gray-600 text-sm space-y-1">
+                <p><span class="font-medium">Monday – Friday:</span> 8:00 AM – 5:00 PM</p>
+                <p><span class="font-medium">Saturday – Sunday:</span> Closed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-avocado-50 rounded-xl border border-avocado-200">
+          <h3 class="font-semibold text-avocado-800 mb-2 font-[family:var(--font-heading)]">🚨 Dental Emergency?</h3>
+          <p class="text-gray-600 text-sm mb-3">We offer same-day emergency appointments. Call us immediately — don't wait.</p>
+          <a href="tel:4423177000" class="btn-primary !py-2 !px-5 !text-sm">Call Now: (442) 317-7000</a>
+        </div>
+      </div>
+
+      <!-- Map + Form -->
+      <div>
+        <h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">Find Us</h2>
+        <div class="bg-gray-200 rounded-xl overflow-hidden mb-8 h-64">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.2!2d-117.2512!3d33.3765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDIyJzM1LjQiTiAxMTfCsDE1JzA0LjMiVw!5e0!3m2!1sen!2sus!4v1620000000000"
+            width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Downtown Dental Studio location">
+          </iframe>
+        </div>
+
+        <h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">Send Us a Message</h2>
+        <form action="https://formspree.io/f/placeholder" method="POST" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+              <input type="text" id="name" name="name" required
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-avocado-500 focus:border-avocado-500 outline-none transition" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+              <input type="tel" id="phone" name="phone" required
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-avocado-500 focus:border-avocado-500 outline-none transition" />
+            </div>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+            <input type="email" id="email" name="email" required
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-avocado-500 focus:border-avocado-500 outline-none transition" />
+          </div>
+          <div>
+            <label for="service" class="block text-sm font-medium text-gray-700 mb-1">I'm Interested In</label>
+            <select id="service" name="service"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-avocado-500 focus:border-avocado-500 outline-none transition">
+              <option value="">Select a service...</option>
+              <option>General Dentistry / Checkup</option>
+              <option>Cosmetic Dentistry</option>
+              <option>Dental Implants</option>
+              <option>Invisalign®</option>
+              <option>Crowns & Root Canals</option>
+              <option>Emergency Visit</option>
+              <option>VIP Membership Info</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <textarea id="message" name="message" rows="4"
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-avocado-500 focus:border-avocado-500 outline-none transition"></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full">Send Message</button>
+          <p class="text-xs text-gray-500 text-center mt-2">
+            By submitting, you agree to be contacted about your request. We respect your privacy.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

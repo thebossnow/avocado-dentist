@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+// Static blog posts data (will be replaced with content collection later)
+const posts = [
+  {
+    slug: 'what-to-expect-first-dental-visit-fallbrook',
+    title: 'What to Expect at Your First Dental Visit in Fallbrook',
+    description: 'Nervous about your first appointment? Here\'s exactly what happens during your first visit to Downtown Dental Studio — and why there\'s nothing to worry about.',
+    date: '2026-05-01',
+    category: 'Patient Education',
+  },
+  {
+    slug: 'dental-implants-vs-bridges-fallbrook',
+    title: 'Dental Implants vs. Bridges: Which Is Right for You?',
+    description: 'Comparing the two most popular tooth replacement options for Fallbrook patients — cost, longevity, and what to expect from each procedure.',
+    date: '2026-04-15',
+    category: 'Restorative Dentistry',
+  },
+  {
+    slug: 'dental-membership-worth-it',
+    title: 'Is a Dental Membership Plan Worth It? Breaking Down the Numbers',
+    description: 'No dental insurance? A VIP membership plan might save you hundreds. We compare membership vs. insurance vs. paying out of pocket for Fallbrook families.',
+    date: '2026-04-01',
+    category: 'Patient Education',
+  },
+  {
+    slug: 'emergency-dentist-fallbrook-guide',
+    title: 'Dental Emergency? Here\'s What to Do (And What NOT to Do)',
+    description: 'A step-by-step guide for handling common dental emergencies in Fallbrook — from knocked-out teeth to severe toothaches.',
+    date: '2026-03-15',
+    category: 'Emergency Care',
+  },
+  {
+    slug: 'invisalign-vs-braces-fallbrook',
+    title: 'Invisalign vs. Traditional Braces: What Fallbrook Patients Should Know',
+    description: 'Clear aligners or braces? We break down the pros, cons, costs, and which option works best for different orthodontic needs.',
+    date: '2026-03-01',
+    category: 'Cosmetic Dentistry',
+  },
+];
+---
+
+<Layout
+  title="Dental Blog | Tips, Guides & News from Downtown Dental Studio"
+  description="Read dental tips, patient guides, and practice news from Dr. Richard J Gill at Downtown Dental Studio in Fallbrook, CA. Oral health education for the whole family."
+  pageType="business"
+>
+  <section class="bg-gradient-to-br from-avocado-700 to-avocado-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">Dental Blog</h1>
+      <p class="text-xl text-avocado-100">Tips, guides, and insights to help you maintain a healthy, beautiful smile.</p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {posts.map(post => (
+        <a href={`/blog/${post.slug}/`} class="card group border border-transparent hover:border-avocado-300 transition-all flex flex-col">
+          <span class="text-xs font-medium text-avocado-600 bg-avocado-50 px-2 py-1 rounded-full inline-block self-start mb-3">
+            {post.category}
+          </span>
+          <h2 class="text-xl font-bold text-avocado-800 mb-2 font-[family:var(--font-heading)] group-hover:text-avocado-600 transition-colors">
+            {post.title}
+          </h2>
+          <p class="text-gray-600 text-sm flex-1">{post.description}</p>
+          <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <time datetime={post.date} class="text-xs text-gray-400">
+              {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <span class="text-avocado-600 text-sm font-medium group-hover:underline">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

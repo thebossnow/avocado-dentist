@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Patient Information | Insurance, Financing & New Patient Forms | Fallbrook"
+  description="New patient information for Downtown Dental Studio in Fallbrook, CA. Learn about insurance, CareCredit financing, Cherry payment plans, VIP memberships, and what to expect at your first visit."
+  pageType="business"
+>
+  <section class="bg-gradient-to-br from-avocado-700 to-avocado-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">Patient Information</h1>
+      <p class="text-xl text-avocado-100">Everything you need to know before your first visit.</p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- What to Expect -->
+      <div>
+        <h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">Your First Visit</h2>
+        <div class="space-y-4">
+          <div class="card">
+            <h3 class="font-semibold text-gray-800 mb-2">1. Warm Welcome</h3>
+            <p class="text-gray-600 text-sm">Our friendly front desk team will greet you, verify your information, and make you feel at home.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold text-gray-800 mb-2">2. Comprehensive Exam</h3>
+            <p class="text-gray-600 text-sm">Dr. Gill will perform a thorough examination, including digital X-rays if needed, and discuss any concerns.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold text-gray-800 mb-2">3. Personalized Treatment Plan</h3>
+            <p class="text-gray-600 text-sm">We'll create a customized care plan tailored to your needs, goals, and budget — with transparent pricing.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold text-gray-800 mb-2">4. Schedule Follow-Up</h3>
+            <p class="text-gray-600 text-sm">Any needed treatments will be scheduled at your convenience. We respect your time.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-avocado-50 rounded-xl border border-avocado-200">
+          <h3 class="font-semibold text-avocado-800 mb-2 font-[family:var(--font-heading)]">📋 What to Bring</h3>
+          <ul class="text-sm text-gray-700 space-y-2">
+            <li>✅ Photo ID</li>
+            <li>✅ Insurance card (if applicable)</li>
+            <li>✅ List of current medications</li>
+            <li>✅ Any recent dental X-rays or records</li>
+            <li>✅ Completed new patient forms (or arrive 15 min early)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Insurance & Payment -->
+      <div>
+        <h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">Insurance & Payment</h2>
+
+        <div class="card mb-6">
+          <h3 class="font-semibold text-gray-800 mb-2">Insurance</h3>
+          <p class="text-gray-600 text-sm mb-3">
+            We are an <strong>out-of-network PPO provider</strong>, which means we can work with most PPO dental 
+            insurance plans. Our team will help you maximize your benefits and handle the coordination of 
+            benefits paperwork so you get the most from your coverage.
+          </p>
+          <p class="text-gray-600 text-sm">
+            Don't have insurance? <a href="/memberships/" class="text-avocado-600 font-medium hover:underline">Check out our VIP Membership plans</a> — 
+            affordable dental care without the insurance hassle.
+          </p>
+        </div>
+
+        <div class="card mb-6">
+          <h3 class="font-semibold text-gray-800 mb-3">Financing Options</h3>
+          <div class="space-y-4">
+            <div class="flex gap-3 items-start">
+              <span class="text-2xl flex-shrink-0">💳</span>
+              <div>
+                <h4 class="font-medium text-gray-800">CareCredit</h4>
+                <p class="text-gray-600 text-sm">Healthcare financing with flexible payment plans and promotional financing options. Apply online or in-office.</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-2xl flex-shrink-0">🍒</span>
+              <div>
+                <h4 class="font-medium text-gray-800">Cherry</h4>
+                <p class="text-gray-600 text-sm">Buy now, pay later for dental care. Quick approval, flexible terms, and no hard credit check.</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-2xl flex-shrink-0">💎</span>
+              <div>
+                <h4 class="font-medium text-gray-800">VIP Membership Plans</h4>
+                <p class="text-gray-600 text-sm">Starting at $39/month. Transparent pricing, no deductibles, no waiting periods. <a href="/memberships/" class="text-avocado-600 hover:underline">Learn more →</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="font-semibold text-gray-800 mb-2">Private Pay</h3>
+          <p class="text-gray-600 text-sm">
+            We accept cash, checks, and all major credit cards. We believe in transparent pricing — 
+            you'll always know the cost of treatment before we begin.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-avocado-50">
+    <div class="container-max px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h2 class="text-3xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Ready to Get Started?</h2>
+      <p class="text-gray-600 mb-8">Call us or use our online form to schedule your first appointment.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="tel:4423177000" class="btn-primary">📞 (442) 317-7000</a>
+        <a href="/contact/" class="btn-secondary">Request Appointment</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,107 @@
+---
+// Injects JSON-LD structured data for SEO
+export interface Props {
+  pageType?: string;
+  pageData?: Record<string, any>;
+}
+
+const { pageType, pageData = {} } = Astro.props;
+
+const baseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Downtown Dental Studio",
+  "alternateName": "Avocado Dentist",
+  "legalName": "Richard J Gill DDS & Associates, APC",
+  "url": "https://avocadodentist.com",
+  "telephone": "+1-442-317-7000",
+  "email": "info@ddsoffallbrook.com",
+  "image": "https://avocadodentist.com/og-default.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1180 S Main Ave",
+    "addressLocality": "Fallbrook",
+    "addressRegion": "CA",
+    "postalCode": "92028",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.3765,
+    "longitude": -117.2512
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/dds.of.fallbrook/",
+    "https://www.facebook.com/profile.php?id=61584605354339"
+  ],
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "City",
+    "name": "Fallbrook"
+  },
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "DDS"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Dr. Richard J Gill",
+    "jobTitle": "Dentist",
+    "worksFor": {
+      "@type": "Dentist",
+      "name": "Downtown Dental Studio"
+    }
+  }
+};
+
+let schema = baseSchema;
+
+if (pageType === 'faq') {
+  schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": (pageData.questions || []).map((q: any) => ({
+      "@type": "Question",
+      "name": q.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": q.answer
+      }
+    }))
+  };
+} else if (pageType === 'blog') {
+  schema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": pageData.title,
+    "description": pageData.description,
+    "author": {
+      "@type": "Organization",
+      "name": "Downtown Dental Studio"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Downtown Dental Studio"
+    },
+    "datePublished": pageData.datePublished,
+    "dateModified": pageData.dateModified || pageData.datePublished,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://avocadodentist.com${Astro.url.pathname}`
+    }
+  };
+} else {
+  schema["@type"] = "MedicalBusiness";
+  schema["@id"] = `https://avocadodentist.com/#organization`;
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)}></script>

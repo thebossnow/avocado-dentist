@@ -1,0 +1,92 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about/', label: 'About' },
+  { href: '/services/', label: 'Services' },
+  { href: '/memberships/', label: 'Memberships' },
+  { href: '/patient-info/', label: 'Patient Info' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/contact/', label: 'Contact' },
+];
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="container-max px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between py-3" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group">
+        <span class="text-3xl" aria-hidden="true">🥑</span>
+        <div class="leading-tight">
+          <span class="block text-lg font-bold text-avocado-700 font-[family:var(--font-heading)]">
+            Downtown Dental
+          </span>
+          <span class="block text-xs text-avocado-500 font-medium">
+            Studio of Fallbrook
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-1">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-avocado-600 
+                   hover:bg-avocado-50 rounded-lg transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+        <a href="tel:4423177000" class="ml-3 btn-primary !py-2 !px-5 !text-sm">
+          (442) 317-7000
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="mobile-menu-toggle"
+        class="lg:hidden p-2 text-gray-700 hover:text-avocado-600"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Nav (hidden by default) -->
+    <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-gray-100 mt-2">
+      <div class="flex flex-col gap-1 pt-3">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class="px-3 py-3 text-base font-medium text-gray-700 hover:text-avocado-600 
+                   hover:bg-avocado-50 rounded-lg transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+        <a href="tel:4423177000" class="mt-2 btn-primary text-center">
+          Call (442) 317-7000
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = !menu!.classList.contains('hidden');
+    menu!.classList.toggle('hidden');
+    iconOpen!.classList.toggle('hidden', isOpen);
+    iconClose!.classList.toggle('hidden', !isOpen);
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>

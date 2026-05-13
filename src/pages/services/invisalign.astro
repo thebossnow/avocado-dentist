@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  { q: 'How does Invisalign work?', a: 'Invisalign uses a series of custom-made, clear plastic aligners that gradually shift your teeth into their ideal position. You wear each set for about 1–2 weeks, then switch to the next set. Treatment typically takes 12–18 months.' },
+  { q: 'How much does Invisalign cost?', a: 'Costs vary based on the complexity of your case. We provide a detailed treatment plan with pricing during your consultation. Many patients use CareCredit or Cherry financing to make treatment affordable.' },
+  { q: 'Is Invisalign better than braces?', a: 'Invisalign offers several advantages: nearly invisible appearance, removable for eating and brushing, no food restrictions, and typically fewer office visits. However, traditional braces may be better for very complex cases. Dr. Gill will help you decide.' },
+  { q: 'Does insurance cover Invisalign?', a: 'Many dental insurance plans cover orthodontic treatment, including Invisalign, at the same level as traditional braces. Our team will verify your benefits and explain your coverage.' },
+  { q: 'Can teens use Invisalign?', a: 'Yes! Invisalign Teen is specifically designed for teenagers, with compliance indicators to track wear time and eruption tabs for growing teeth.' },
+];
+
+const pageData = { questions: faqs.map(f => ({ question: f.q, answer: f.a })) };
+---
+
+<Layout
+  title="Invisalign® in Fallbrook CA | Clear Aligners & Orthodontics"
+  description="Dr. Richard J Gill is a certified Invisalign® provider in Fallbrook, CA. Clear aligner treatment for teens and adults. Straighten your teeth discreetly. Free consultation available. Call (442) 317-7000."
+  pageType="faq" pageData={pageData}
+>
+  <section class="bg-gradient-to-br from-avocado-700 to-avocado-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">Invisalign® in Fallbrook</h1>
+      <p class="text-xl text-avocado-100 max-w-2xl">Straighten your teeth discreetly with clear aligners. No metal, no wires, no one will even notice.</p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">The Clear Choice for a Straighter Smile</h2>
+          <p class="text-gray-700 leading-relaxed">
+            You deserve a smile you're proud to show off. Invisalign® clear aligners offer a modern, 
+            virtually invisible way to straighten your teeth — without the brackets and wires of traditional 
+            braces. Dr. Gill is a certified Invisalign provider serving Fallbrook, Bonsall, and North San Diego County.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Why Patients Choose Invisalign</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">👻 Nearly Invisible</h3><p class="text-gray-600 text-sm">Clear aligners are barely noticeable — most people won't even know you're wearing them.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🍕 No Food Restrictions</h3><p class="text-gray-600 text-sm">Aligners are removable — eat all your favorite foods without worry.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🪥 Easy to Clean</h3><p class="text-gray-600 text-sm">Remove aligners to brush and floss normally — better oral hygiene during treatment.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">⏱️ Fewer Office Visits</h3><p class="text-gray-600 text-sm">No wire tightening appointments. Simply swap aligners at home every 1–2 weeks.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🛋️ More Comfortable</h3><p class="text-gray-600 text-sm">Smooth plastic aligners are gentler on cheeks and gums than metal brackets.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">✅ Proven Results</h3><p class="text-gray-600 text-sm">Over 14 million smiles transformed with Invisalign — the most trusted clear aligner system.</p></div>
+          </div>
+        </div>
+
+        <div><h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">FAQ</h2>
+          <div class="space-y-4">{faqs.map(faq => (<div class="card"><h3 class="font-semibold text-gray-800 mb-2">{faq.q}</h3><p class="text-gray-600 text-sm">{faq.a}</p></div>))}</div>
+        </div>
+      </div>
+      <div class="lg:col-span-1 space-y-6">
+        <div class="card bg-avocado-50 border border-avocado-200"><h3 class="font-semibold text-avocado-800 mb-3 font-[family:var(--font-heading)]">📍 Visit Us</h3><p class="text-gray-700 text-sm">1180 S Main Ave<br/>Fallbrook, CA 92028</p><a href="tel:4423177000" class="block mt-3 text-avocado-600 font-semibold text-sm hover:underline">(442) 317-7000</a></div>
+        <div class="card"><h3 class="font-semibold text-gray-800 mb-3 font-[family:var(--font-heading)]">Ready for a Consultation?</h3><p class="text-gray-700 text-sm mb-3">We'll evaluate your smile and show you a preview of your results.</p><a href="/contact/" class="btn-primary !py-2 !px-4 !text-sm">Book Consultation</a></div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  { q: 'How much does teeth whitening cost?', a: 'Professional teeth whitening costs vary based on the method chosen. In-office whitening provides dramatic results in a single visit, while take-home kits offer gradual improvement. We provide transparent pricing during your consultation.' },
+  { q: 'Are veneers permanent?', a: 'Porcelain veneers are considered a permanent treatment because a small amount of enamel is removed to place them. They typically last 10–15 years with proper care and can be replaced when needed.' },
+  { q: 'How long does a smile makeover take?', a: 'The timeline depends on the treatments involved. Simple whitening takes one visit; veneers typically require 2–3 appointments over a few weeks. Dr. Gill will give you a clear timeline during your consultation.' },
+  { q: 'Does insurance cover cosmetic dentistry?', a: 'Cosmetic procedures are typically not covered by insurance. However, we offer CareCredit, Cherry financing, and VIP membership discounts to make your dream smile affordable.' },
+  { q: 'Is cosmetic dentistry painful?', a: 'Most cosmetic procedures are minimally invasive and well-tolerated. We prioritize patient comfort with gentle techniques. For more involved treatments, we discuss sedation options.' },
+];
+
+const pageData = { questions: faqs.map(f => ({ question: f.q, answer: f.a })) };
+---
+
+<Layout
+  title="Cosmetic Dentist Fallbrook CA | Teeth Whitening, Veneers & Smile Makeovers"
+  description="Dr. Richard J Gill offers cosmetic dentistry in Fallbrook, CA — teeth whitening, porcelain veneers, dental bonding, and complete smile makeovers. Transform your smile. Call (442) 317-7000."
+  pageType="faq" pageData={pageData}
+>
+  <section class="bg-gradient-to-br from-avocado-700 to-avocado-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">Cosmetic Dentistry in Fallbrook</h1>
+      <p class="text-xl text-avocado-100 max-w-2xl">Your dream smile is closer than you think. From subtle enhancements to complete smile makeovers.</p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Transform Your Smile with Confidence</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Your smile is one of the first things people notice. At Downtown Dental Studio, Dr. Richard J Gill 
+            combines artistry with advanced dental technology to create beautiful, natural-looking results. 
+            Whether you want a brighter smile, straighter teeth, or a complete transformation, we have the 
+            expertise to bring your vision to life.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Our Cosmetic Services</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">✨ Teeth Whitening</h3><p class="text-gray-600 text-sm">Professional in-office and take-home whitening. Dramatic results, safely achieved.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">💎 Porcelain Veneers</h3><p class="text-gray-600 text-sm">Custom-crafted thin shells that correct color, shape, size, and alignment.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🔧 Dental Bonding</h3><p class="text-gray-600 text-sm">Quick, affordable repair for chips, gaps, and discoloration — often in a single visit.</p></div>
+            <div class="card"><h3 class="font-semibold text-gray-800 mb-2">🎨 Smile Makeovers</h3><p class="text-gray-600 text-sm">A comprehensive treatment plan combining multiple cosmetic procedures for total transformation.</p></div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-avocado-800 mb-6 font-[family:var(--font-heading)]">FAQ</h2>
+          <div class="space-y-4">
+            {faqs.map(faq => (
+              <div class="card"><h3 class="font-semibold text-gray-800 mb-2">{faq.q}</h3><p class="text-gray-600 text-sm">{faq.a}</p></div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-1 space-y-6">
+        <div class="card bg-avocado-50 border border-avocado-200">
+          <h3 class="font-semibold text-avocado-800 mb-3 font-[family:var(--font-heading)]">📍 Visit Us</h3>
+          <p class="text-gray-700 text-sm">1180 S Main Ave<br/>Fallbrook, CA 92028</p>
+          <a href="tel:4423177000" class="block mt-3 text-avocado-600 font-semibold text-sm hover:underline">(442) 317-7000</a>
+        </div>
+        <div class="card bg-gold-50 border border-gold-200">
+          <h3 class="font-semibold text-avocado-800 mb-3 font-[family:var(--font-heading)]">💎 Financing Available</h3>
+          <p class="text-gray-700 text-sm mb-3">CareCredit & Cherry financing make your dream smile affordable. Get pre-approved in minutes.</p>
+          <a href="/patient-info/" class="text-avocado-600 font-medium text-sm hover:underline">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const services = [
+  { icon: '🔍', title: 'General Dentistry', href: '/services/general-dentistry/', desc: 'Routine exams, cleanings, digital X-rays, oral cancer screenings, and fillings.', keywords: 'general dentist Fallbrook CA, family dentist Fallbrook, dental checkup Fallbrook' },
+  { icon: '✨', title: 'Cosmetic Dentistry', href: '/services/cosmetic-dentistry/', desc: 'Teeth whitening, porcelain veneers, dental bonding, and complete smile makeovers.', keywords: 'cosmetic dentist Fallbrook, teeth whitening Fallbrook, veneers Fallbrook' },
+  { icon: '🔩', title: 'Dental Implants', href: '/services/dental-implants/', desc: 'Single and multiple tooth implants, implant-supported dentures, and full-arch restoration.', keywords: 'dental implants Fallbrook, tooth replacement Fallbrook, implant dentist Fallbrook' },
+  { icon: '😁', title: 'Invisalign®', href: '/services/invisalign/', desc: 'Clear aligner therapy for teens and adults. Straighten your teeth discreetly.', keywords: 'Invisalign Fallbrook, clear aligners Fallbrook, orthodontics Fallbrook' },
+  { icon: '👑', title: 'Crowns & Root Canals', href: '/services/root-canals-crowns/', desc: 'Restorative treatments to repair and protect damaged or infected teeth.', keywords: 'root canal Fallbrook, dental crowns Fallbrook, restorative dentist Fallbrook' },
+  { icon: '🚨', title: 'Emergency Dentistry', href: '/services/emergency-dentistry/', desc: 'Same-day urgent care for toothaches, broken teeth, lost fillings, and dental trauma.', keywords: 'emergency dentist Fallbrook, same day dentist Fallbrook, urgent dental care Fallbrook' },
+];
+---
+
+<Layout
+  title="Dental Services | General, Cosmetic & Emergency Dentistry | Fallbrook, CA"
+  description="Downtown Dental Studio offers comprehensive dental services in Fallbrook, CA: general dentistry, cosmetic dentistry, dental implants, Invisalign®, crowns, root canals, and emergency care."
+  pageType="business"
+>
+  <section class="bg-gradient-to-br from-avocado-700 to-avocado-800 text-white">
+    <div class="container-max section-padding">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 font-[family:var(--font-heading)]">Our Services</h1>
+      <p class="text-xl text-avocado-100 max-w-2xl">
+        Comprehensive dental care for the entire family — from routine cleanings to advanced restorative treatments, all under one roof in Fallbrook.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-max section-padding">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {services.map(svc => (
+        <a href={svc.href} class="card group border border-transparent hover:border-avocado-300 transition-all">
+          <div class="flex gap-5">
+            <span class="text-5xl flex-shrink-0">{svc.icon}</span>
+            <div>
+              <h2 class="text-2xl font-bold text-avocado-800 mb-2 font-[family:var(--font-heading)] group-hover:text-avocado-600 transition-colors">
+                {svc.title}
+              </h2>
+              <p class="text-gray-600 mb-3">{svc.desc}</p>
+              <span class="text-avocado-600 text-sm font-medium group-hover:underline">Learn more →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-avocado-50">
+    <div class="container-max px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h2 class="text-3xl font-bold text-avocado-800 mb-4 font-[family:var(--font-heading)]">Not Sure What You Need?</h2>
+      <p class="text-gray-600 mb-8">Call us for a consultation. Dr. Gill will assess your needs and recommend the right treatment.</p>
+      <a href="tel:4423177000" class="btn-primary text-lg">📞 Call (442) 317-7000</a>
+    </div>
+  </section>
+</Layout>
