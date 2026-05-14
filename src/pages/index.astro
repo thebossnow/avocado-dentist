@@ -9,35 +9,50 @@ import Layout from '../layouts/Layout.astro';
 >
   <!-- Hero -->
   <section class="container-max section">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 bg-leaf-50 px-4 py-2 rounded-full text-sm font-medium text-leaf-700 mb-8">
-        <span class="w-2 h-2 rounded-full bg-leaf-500 animate-pulse"></span>
-        Now accepting new patients
-      </div>
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-dental-900 leading-[1.05] mb-6 text-balance">
-        A dental experience<br/>
-        <span class="text-dental-500">you'll actually enjoy</span>
-      </h1>
-      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl mb-10">
-        Dr. Richard J Gill and the Downtown Dental Studio team provide warm, 
-        personalized dentistry in the heart of Fallbrook. No judgment, no pressure — 
-        just exceptional care in a space that feels like home.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="tel:4423177000" class="btn-primary text-base px-8 py-4">
-          Call (442) 317-7000
-        </a>
-        <a href="/contact/" class="btn-outline text-base px-8 py-4">
-          Request Appointment
-        </a>
-      </div>
-      <div class="flex items-center gap-8 mt-12 text-sm text-gray-400">
-        <div class="flex items-center gap-2">
-          <span class="text-lg">📍</span> 1180 S Main Ave, Fallbrook
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-leaf-50 px-4 py-2 rounded-full text-sm font-medium text-leaf-700 mb-8">
+          <span class="w-2 h-2 rounded-full bg-leaf-500 animate-pulse"></span>
+          Now accepting new patients
         </div>
-        <div class="flex items-center gap-2">
-          <span class="text-lg">🕐</span> Mon–Fri 8am–5pm
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-dental-900 leading-[1.05] mb-6 text-balance">
+          A dental experience<br/>
+          <span class="text-dental-500">you'll actually enjoy</span>
+        </h1>
+        <p class="text-xl text-gray-500 leading-relaxed max-w-2xl mb-10">
+          Dr. Richard J Gill and the Downtown Dental Studio team provide warm, 
+          personalized dentistry in the heart of Fallbrook. No judgment, no pressure — 
+          just exceptional care in a space that feels like home.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:4423177000" class="btn-primary text-base px-8 py-4">
+            Call (442) 317-7000
+          </a>
+          <a href="/contact/" class="btn-outline text-base px-8 py-4">
+            Request Appointment
+          </a>
         </div>
+        <div class="flex items-center gap-8 mt-12 text-sm text-gray-400">
+          <div class="flex items-center gap-2">
+            <span class="text-lg">📍</span> 1180 S Main Ave, Fallbrook
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-lg">🕐</span> Mon–Fri 8am–5pm
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:block">
+        <picture>
+          <source srcset="/images/dr-gill.webp" type="image/webp">
+          <img
+            src="/images/dr-gill.jpg"
+            alt="Dr. Richard J Gill — Downtown Dental Studio, Fallbrook CA"
+            class="rounded-3xl shadow-2xl w-full max-w-md mx-auto"
+            width="600"
+            height="900"
+            loading="eager"
+          >
+        </picture>
       </div>
     </div>
   </section>
@@ -228,6 +243,26 @@ import Layout from '../layouts/Layout.astro';
         </a>
       </div>
     </div>
+  </section>
+
+  <!-- Tour Our Office -->
+  <section class="container-max section">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-leaf-600 uppercase tracking-widest mb-3">Tour Our Office</p>
+      <h2 class="text-4xl sm:text-5xl font-bold text-dental-900 mb-4 text-balance">A space designed for your comfort</h2>
+      <p class="text-lg text-gray-500 max-w-2xl mx-auto">Warm, modern, and welcoming — our Fallbrook office feels more like a living room than a dental clinic.</p>
+    </div>
+    <picture>
+      <source srcset="/images/reception.webp" type="image/webp">
+      <img
+        src="/images/reception.jpg"
+        alt="Downtown Dental Studio reception area — Fallbrook, CA"
+        class="rounded-3xl shadow-lg w-full"
+        width="1200"
+        height="900"
+        loading="lazy"
+      >
+    </picture>
   </section>
 
   <!-- Payment Options -->
