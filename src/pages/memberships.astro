@@ -3,135 +3,136 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="VIP Dental Memberships | No Insurance? No Problem | Fallbrook"
-  description="Downtown Dental Studio offers affordable dental membership plans through DentalHQ. Transparent pricing, no deductibles, no waiting periods. Join starting at $39/month."
+  title="Dental Membership Plans | No Insurance Needed | Fallbrook"
+  description="Downtown Dental Studio offers affordable dental membership plans through DentalHQ. No waiting periods, no deductibles, no insurance claims. Join starting at $39/month. HSA & FSA accepted."
   pageType="business"
 >
-  <section class="bg-gradient-to-br from-gold-400 to-gold-500">
-    <div class="container-max section-padding text-center">
-      <span class="inline-block bg-white/30 backdrop-blur text-avocado-900 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-        💎 VIP Dental Memberships
-      </span>
-      <h1 class="text-4xl md:text-5xl font-bold text-avocado-900 mb-4 font-[family:var(--font-heading)]">
-        Quality Dental Care,<br/>Available for Everyone
+  <section class="bg-gradient-to-br from-warm-500 to-warm-600">
+    <div class="container-max section py-16 sm:py-20 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4 text-balance">
+        Affordable Dental Membership Plans
       </h1>
-      <p class="text-xl text-avocado-800 max-w-3xl mx-auto">
-        No insurance? No problem. Our VIP membership plans make premium dental care accessible and affordable 
-        for every member of your family.
+      <p class="text-xl text-warm-100 max-w-3xl mx-auto">
+        A dental membership plan is your ticket to affordable dental care. Instead of dealing with 
+        the complexities of insurance, you pay an annual or monthly fee for preventative care and 
+        enjoy discounted additional services.
+      </p>
+      <p class="text-sm text-warm-200 mt-6 max-w-2xl mx-auto">
+        Most HSA &amp; FSA cards accepted &middot; Coverage begins immediately upon enrollment 
+        &middot; No waiting periods, deductibles, or insurance claims
       </p>
     </div>
   </section>
 
-  <!-- What is it -->
-  <section class="container-max section-padding">
-    <h2 class="text-3xl font-bold text-avocado-800 mb-8 text-center font-[family:var(--font-heading)]">
-      How It Works
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card text-center">
-        <span class="text-5xl block mb-4">1️⃣</span>
-        <h3 class="text-xl font-semibold text-avocado-800 mb-2 font-[family:var(--font-heading)]">Choose Your Plan</h3>
-        <p class="text-gray-600 text-sm">Select the membership that fits your needs — from basic preventive care to full coverage.</p>
+  <!-- Plans -->
+  <section class="container-max section">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+      <!-- Child Wellness -->
+      <div class="card-hover flex flex-col">
+        <h2 class="text-xl font-bold text-dental-900 mb-2">Child Wellness Plan</h2>
+        <p class="text-sm text-gray-500 mb-4">Ages 13 &amp; under</p>
+        <p class="text-4xl font-bold text-dental-700 mb-1">$39<span class="text-lg font-normal text-gray-400">/mo</span></p>
+        <p class="text-sm text-gray-400 mb-6">or $395/year</p>
+        <ul class="space-y-3 text-sm text-gray-700 flex-1">
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 2 Child cleanings per year</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> Fluoride treatment with cleaning</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 2 Regular exams with cleaning</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> Oral cancer screening with cleaning</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 1 set of routine X-rays per year</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 1 emergency exam with X-ray per year (as needed)</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> Up to 15% off additional treatment</li>
+        </ul>
       </div>
-      <div class="card text-center">
-        <span class="text-5xl block mb-4">2️⃣</span>
-        <h3 class="text-xl font-semibold text-avocado-800 mb-2 font-[family:var(--font-heading)]">Sign Up Online</h3>
-        <p class="text-gray-600 text-sm">Quick and easy online enrollment through DentalHQ. No paperwork, no waiting periods.</p>
+
+      <!-- Adult Wellness — MOST POPULAR -->
+      <div class="card-hover flex flex-col border-2 border-warm-500 relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-warm-500 text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">MOST POPULAR</span>
+        <h2 class="text-xl font-bold text-dental-900 mb-2">Adult Wellness Plan</h2>
+        <p class="text-sm text-gray-500 mb-4">Annual savings: $300+</p>
+        <p class="text-4xl font-bold text-dental-700 mb-1">$59<span class="text-lg font-normal text-gray-400">/mo</span></p>
+        <p class="text-sm text-gray-400 mb-6">or $595/year</p>
+        <ul class="space-y-3 text-sm text-gray-700 flex-1">
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 2 Adult cleanings per year</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 2 Regular exams with cleaning</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> Oral cancer screening with cleaning</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 1 set of routine X-rays per year</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 1 emergency exam with X-ray per year (as needed)</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> Up to 15% off additional treatment</li>
+        </ul>
       </div>
-      <div class="card text-center">
-        <span class="text-5xl block mb-4">3️⃣</span>
-        <h3 class="text-xl font-semibold text-avocado-800 mb-2 font-[family:var(--font-heading)]">Start Smiling</h3>
-        <p class="text-gray-600 text-sm">Schedule your first appointment and enjoy premium dental care at member prices immediately.</p>
+
+      <!-- Deep Clean Maintenance -->
+      <div class="card-hover flex flex-col">
+        <h2 class="text-xl font-bold text-dental-900 mb-2">Deep Clean Maintenance Plan</h2>
+        <p class="text-sm text-gray-500 mb-4">For ongoing periodontal care</p>
+        <p class="text-4xl font-bold text-dental-700 mb-1">$99<span class="text-lg font-normal text-gray-400">/mo</span></p>
+        <p class="text-sm text-gray-400 mb-6">or $995/year</p>
+        <ul class="space-y-3 text-sm text-gray-700 flex-1">
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 4 Periodontal Maintenance cleanings per year</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 1 Fluoride treatment per year</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 2 Regular exams with cleaning</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> Oral cancer screening with cleaning</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 1 set of routine X-rays per year</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> 1 emergency exam with X-ray per year (as needed)</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> Save 15% off scaling and root planing</li>
+          <li class="flex gap-2"><span class="text-leaf-600 font-bold flex-shrink-0">✓</span> Up to 15% off additional treatment</li>
+        </ul>
       </div>
+
+    </div>
+
+    <!-- Family Discounts -->
+    <div class="text-center mt-10">
+      <p class="text-sm font-semibold text-dental-700">👨‍👩‍👧‍👦 Family Discounts Available</p>
+      <p class="text-sm text-gray-500 mt-1">
+        3% off with 2 family members &middot; 5% off with 3 family members &middot; 8% off with 4 or more family members
+      </p>
     </div>
   </section>
 
-  <!-- Benefits -->
-  <section class="bg-white">
-    <div class="container-max section-padding">
-      <h2 class="text-3xl font-bold text-avocado-800 mb-8 text-center font-[family:var(--font-heading)]">
-        Membership Benefits
-      </h2>
+  <!-- Important Notes -->
+  <section class="bg-gray-50 border-y border-gray-100">
+    <div class="container-max section py-12">
+      <h2 class="text-2xl font-bold text-dental-900 mb-6 text-center">What You Should Know</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
         <div class="card text-center">
-          <span class="text-4xl block mb-3">🛡️</span>
+          <span class="text-3xl block mb-3">⚡</span>
+          <h3 class="font-semibold text-gray-800 mb-2">No Waiting Periods</h3>
+          <p class="text-gray-600 text-sm">Coverage begins immediately upon enrollment. No delays, no waiting.</p>
+        </div>
+        <div class="card text-center">
+          <span class="text-3xl block mb-3">🛡️</span>
           <h3 class="font-semibold text-gray-800 mb-2">No Deductibles</h3>
           <p class="text-gray-600 text-sm">Pay only for what you need. No complicated deductibles to meet.</p>
         </div>
         <div class="card text-center">
-          <span class="text-4xl block mb-3">⚡</span>
-          <h3 class="font-semibold text-gray-800 mb-2">No Waiting Periods</h3>
-          <p class="text-gray-600 text-sm">Get care immediately. Your coverage starts the day you sign up.</p>
+          <span class="text-3xl block mb-3">📋</span>
+          <h3 class="font-semibold text-gray-800 mb-2">No Insurance Claims</h3>
+          <p class="text-gray-600 text-sm">No paperwork, no denials. This is a membership — not insurance.</p>
         </div>
         <div class="card text-center">
-          <span class="text-4xl block mb-3">💰</span>
-          <h3 class="font-semibold text-gray-800 mb-2">Transparent Pricing</h3>
-          <p class="text-gray-600 text-sm">Know exactly what you'll pay before any treatment begins.</p>
-        </div>
-        <div class="card text-center">
-          <span class="text-4xl block mb-3">🎯</span>
-          <h3 class="font-semibold text-gray-800 mb-2">No Annual Maximums</h3>
-          <p class="text-gray-600 text-sm">Get the care you need without hitting coverage limits.</p>
+          <span class="text-3xl block mb-3">💰</span>
+          <h3 class="font-semibold text-gray-800 mb-2">HSA &amp; FSA Accepted</h3>
+          <p class="text-gray-600 text-sm">Most HSA and FSA cards accepted for membership payments.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Plans Preview -->
-  <section class="bg-avocado-50">
-    <div class="container-max section-padding">
-      <h2 class="text-3xl font-bold text-avocado-800 mb-8 text-center font-[family:var(--font-heading)]">
-        Plan Options
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div class="card text-center border-2 border-transparent hover:border-avocado-300 transition-all">
-          <h3 class="text-xl font-bold text-avocado-800 mb-2 font-[family:var(--font-heading)]">Basic</h3>
-          <p class="text-3xl font-bold text-avocado-600 mb-1">$39<span class="text-lg font-normal text-gray-500">/mo</span></p>
-          <p class="text-sm text-gray-500 mb-4">Great for individuals</p>
-          <ul class="text-sm text-gray-600 space-y-2 mb-6 text-left">
-            <li>✅ 2 Cleanings / Year</li>
-            <li>✅ 2 Exams / Year</li>
-            <li>✅ X-Rays</li>
-            <li>✅ 15% Off Treatments</li>
-            <li>✅ Emergency Exams</li>
-          </ul>
-        </div>
-        <div class="card text-center border-2 border-gold-500 relative">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
-          <h3 class="text-xl font-bold text-avocado-800 mb-2 font-[family:var(--font-heading)]">Family</h3>
-          <p class="text-3xl font-bold text-avocado-600 mb-1">$69<span class="text-lg font-normal text-gray-500">/mo</span></p>
-          <p class="text-sm text-gray-500 mb-4">Best for families</p>
-          <ul class="text-sm text-gray-600 space-y-2 mb-6 text-left">
-            <li>✅ Everything in Basic</li>
-            <li>✅ Covers Spouse + Kids</li>
-            <li>✅ 20% Off Treatments</li>
-            <li>✅ Free Whitening</li>
-            <li>✅ Priority Scheduling</li>
-          </ul>
-        </div>
-        <div class="card text-center border-2 border-transparent hover:border-avocado-300 transition-all">
-          <h3 class="text-xl font-bold text-avocado-800 mb-2 font-[family:var(--font-heading)]">Premium</h3>
-          <p class="text-3xl font-bold text-avocado-600 mb-1">$99<span class="text-lg font-normal text-gray-500">/mo</span></p>
-          <p class="text-sm text-gray-500 mb-4">Complete coverage</p>
-          <ul class="text-sm text-gray-600 space-y-2 mb-6 text-left">
-            <li>✅ Everything in Family</li>
-            <li>✅ 25% Off Treatments</li>
-            <li>✅ Free Emergency Visits</li>
-            <li>✅ Annual Oral Cancer Screening</li>
-            <li>✅ Premium Concierge Service</li>
-          </ul>
-        </div>
+      <div class="max-w-2xl mx-auto mt-10 space-y-3 text-sm text-gray-600">
+        <p><strong>Important:</strong> This is <em>not</em> dental insurance — it's a membership program for prepaid dental services offered by our practice. Discounts do not cover procedures performed outside of this office.</p>
+        <p>Some membership plans may have a one-time activation fee for monthly payments.</p>
+        <p>After enrollment, please <a href="tel:4423177000" class="text-dental-700 font-semibold underline">call the office</a> to schedule your first appointment. Your membership becomes effective immediately.</p>
+        <p>During your first visit, Dr. Gill and the team will confirm the best plan for your specific needs.</p>
       </div>
-      <p class="text-center text-sm text-gray-500 mt-6">* Plans subject to change. View current options on DentalHQ for the most accurate pricing.</p>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="bg-avocado-800 text-white">
-    <div class="container-max px-4 sm:px-6 lg:px-8 py-16 text-center">
-      <h2 class="text-3xl font-bold mb-4 font-[family:var(--font-heading)]">Ready to Join?</h2>
-      <p class="text-lg text-avocado-200 mb-8 max-w-2xl mx-auto">
-        Enroll online in minutes through DentalHQ. View all plan details and choose the one that's right for you.
+  <section class="bg-dental-900 text-white">
+    <div class="container-max py-16 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Join?</h2>
+      <p class="text-lg text-dental-200 mb-8 max-w-2xl mx-auto">
+        Enroll online in minutes. Choose your plan, sign up, and start saving immediately.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="https://app.dentalhq.com/accounts/signup/my-dentist/9803" 
@@ -139,10 +140,14 @@ import Layout from '../layouts/Layout.astro';
            class="btn-gold text-lg">
           Sign Up on DentalHQ →
         </a>
-        <a href="tel:4423177000" class="btn-secondary !border-white !text-white hover:!bg-white/10 text-lg">
-          Call to Learn More
+        <a href="tel:4423177000" class="btn-outline !border-white !text-white hover:!bg-white/10 text-lg">
+          Call (442) 317-7000
         </a>
       </div>
+      <p class="text-xs text-dental-400 mt-6 max-w-lg mx-auto">
+        Existing members: <a href="https://app.dentalhq.com/accounts/login?id=9803" 
+        target="_blank" rel="noopener" class="underline hover:text-white">Log in to your account</a>
+      </p>
     </div>
   </section>
 </Layout>
