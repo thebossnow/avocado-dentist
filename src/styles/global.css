@@ -85,7 +85,8 @@
   }
 
   .card-hover {
-    @apply card hover:shadow-lg hover:border-gray-200;
+    @apply bg-white rounded-2xl border border-gray-100 p-6 sm:p-8
+           transition-shadow duration-200 hover:shadow-lg hover:border-gray-200;
   }
 
   .btn {
@@ -94,27 +95,37 @@
   }
 
   .btn-primary {
-    @apply btn bg-dental-700 text-white hover:bg-dental-800 shadow-sm hover:shadow-md;
+    @apply inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold
+           rounded-full transition-all duration-200
+           bg-dental-700 text-white hover:bg-dental-800 shadow-sm hover:shadow-md;
   }
 
   .btn-secondary {
-    @apply btn-outline;
+    @apply inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold
+           rounded-full transition-all duration-200
+           border-2 border-dental-700 text-dental-700 hover:bg-dental-700 hover:text-white;
   }
 
   .btn-accent {
-    @apply btn bg-leaf-600 text-white hover:bg-leaf-700 shadow-sm hover:shadow-md;
+    @apply inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold
+           rounded-full transition-all duration-200
+           bg-leaf-600 text-white hover:bg-leaf-700 shadow-sm hover:shadow-md;
   }
 
   .btn-outline {
-    @apply btn border-2 border-dental-700 text-dental-700 hover:bg-dental-700 hover:text-white;
+    @apply inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold
+           rounded-full transition-all duration-200
+           border-2 border-dental-700 text-dental-700 hover:bg-dental-700 hover:text-white;
   }
 
   .btn-gold {
-    @apply btn bg-warm-500 text-white hover:bg-warm-600 shadow-sm hover:shadow-md;
+    @apply inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold
+           rounded-full transition-all duration-200
+           bg-warm-500 text-white hover:bg-warm-600 shadow-sm hover:shadow-md;
   }
 
   .section-padding {
-    @apply section;
+    @apply py-16 sm:py-20 lg:py-28;
   }
 
   .text-balance {
